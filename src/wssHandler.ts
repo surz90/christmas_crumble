@@ -181,7 +181,13 @@ export const WSSHandler = (function () {
                 log((RC.row * 5) + 4, (RC.row * 5) + 4)
 
                 randomCellDestroy.fireTo(new Vector3(RC.row * 5 + 4, 0, RC.col * 5 + 4))
-                map.destroy(RC.row, RC.col)
+
+                let destroyDelay = new Entity()
+                destroyDelay.addComponent(new utils.Delay(1000, () => {
+                    map.destroy(RC.row, RC.col)
+                    engine.removeEntity(destroyDelay)
+                }))
+                engine.addEntity(destroyDelay)
                 break
 
             case ServerMethod.REPAIR:

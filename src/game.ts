@@ -113,7 +113,8 @@ startDelay.addComponent(new utils.Delay(5000, () => {
     FetchuserInformation()
         .then((userData) => {
             log('fetch success')
-            WSSHandler.init('wss://localhost', userData)
+            WSSHandler.init('wss://64-154-38-157.nip.io/broadcast', userData)
+            //WSSHandler.init('wss://localhost', userData)
             engine.addEntity(modArea)
         })
         .catch((err) => {
