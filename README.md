@@ -27,3 +27,6 @@ ANIMATION:
 - Rigging avatar animations from https://www.mixamo.com/
 
 
+Some sources code copied from: 
+AVATAR SWAP: https://github.com/decentraland-scenes/avatar-swap
+LASER FIRE ANIMATION: https://github.com/decentraland-scenes/light-bounce-puzzle
